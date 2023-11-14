@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        text-align: center;
+        font-family: "Happy Monkey", cursive;
+        background: linear-gradient(#a2d2ff, #efb0c9);
+        color: #ffffff;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        text-shadow: 0 0 1px black;
+      }
+      #bff-img {
+        width: 150px;
+        border-radius: 50%;
+        border: 6px solid #efb0c9;
+        margin: 5px auto 10px auto;
+      }
+      #bday-age {
+        background: #efb0c9;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 5px 0 10px 0;
+      }
+      #bday-date {
+        margin: 0;
+        background: #efb0c9;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      #header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .gift-section {
+        margin-top: 50px;
+      }
+      .gift-title {
+        margin-bottom: 10px;
+      }
+      .gift-hint {
+        margin-top: 0;
+      }
+      .gift-img {
+        margin: 20px auto;
+        width: 400px;
+        height: 400px;
+        border: 6px solid white;
+        border-radius: 10px;
+        background-image: url("gift-cover.jpg");
+        background-size: cover;
+      }
+      #gift-img-happy:hover,
+      #gift-img-happy:focus {
+        background-image: url("happy.gif");
+      }
+      #gift-img-hot:hover,
+      #gift-img-hot:focus {
+        background-image: url("kid-thinking.gif");
+      }
+      #gift-img-genius:hover,
+      #gift-img-genius:focus {
+        background: url(you-are.gif);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      #gift-img-badass:hover,
+      #gift-img-badass:focus {
+        background: url(baby-turns-around.gif);
+        background-size: cover;
+      }
+      #gift-img-cheers {
+        height: 200px;
+      }
+      #gift-img-cheers:hover,
+      #gift-img-cheers:focus {
+        background-image: url(birthday-happy-birthday.gif);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .footer {
+        width: 400px;
+        margin: 40px auto 20px auto;
+        font-style: italic;
+      }
+      .footer,
+      a {
+        color: rgb(83, 76, 76);
+        text-decoration: none;
+      }
+      a:hover {
+        color: rgb(158, 4, 4);
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Today is Eunice's birthday 🎉🎂</h1>
+      <img id="bff-img" src="WhatsApp Image 2023-10-16 at 19.14.06.jpeg" />
+      <h2 id="bday-age">20 years old</h2>
+      <h4 id="bday-date">15.11.2003</h4>
+    </div>
+    <div class="gift-section">
+      <h2 class="gift-title">Here's how happy I am for you today 🥳</h2>
+      <h3 class="gift-hint">(Tap The gifts to open them)</h3>
+      <div
+        class="gift-img"
+        id="gift-img-happy"
+        onclick="toggleActive(this)"
+      ></div>
+    </div>
+    <div class="gift-section">
+      <h2 class="gift-title">
+        How i feel when i spend days without talking to you 😪
+      </h2>
+      <div
+        class="gift-img"
+        id="gift-img-hot"
+        onclick="toggleActive(this)"
+      ></div>
+    </div>
+    <div class="gift-section">
+      <h2 class="gift-title">If i had to describe you in one word👇🏼</h2>
+      <div
+        class="gift-img"
+        id="gift-img-genius"
+        onclick="toggleActive(this)"
+      ></div>
+    </div>
+    <div class="gift-section">
+      <h2 class="gift-title">
+        when ugly people enter the room and see how cute you are😅
+      </h2>
+      <div
+        class="gift-img"
+        id="gift-img-badass"
+        onclick="toggleActive(this)"
+      ></div>
+    </div>
+    <div class="gift-section">
+      <h2 class="gift-title">This one's for you Sis🥂</h2>
+      <div
+        class="gift-img"
+        id="gift-img-cheers"
+        onclick="toggleActive(this)"
+      ></div>
+    </div>
+    <script>
+      function toggleActive(element) {
+        element.classList.toggle("active");
+      }
+    </script>
+    <p>
+      <a href="https://www.instagram.com/franc_kgaby" onclick="openLink(event)"
+        >FranckDev &copy;2023</a
+      >
+    </p>
+    <script>
+      function openLink(event) {
+        event.preventDefault();
+        window.open(event.target.href, "_blank");
+      }
+    </script>
+  </body>
+</html>
